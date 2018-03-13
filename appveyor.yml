@@ -9,7 +9,7 @@ test_script:
     docker sqlcmd psql mongo rabbitmqctl packer aws localstack az \
     pwsh mono mcs xsp4 csc \
     pip easy_install virtualenv python python3 \
-    git svn hg \
+    git svn hg
     do 
       command -v $cmd
     done
