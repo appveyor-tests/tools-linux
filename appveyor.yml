@@ -1,0 +1,17 @@
+init:
+- appveyor version
+
+test_script:
+- sh: |
+    for cmd in wget curl 7z 7za ftp lftp tclsh \
+    make mvn gradle ant yarn \
+    gcc gfortran java javac go nodejs ruby \
+    docker sqlcmd psql mongo rabbitmqctl packer aws localstack az \
+    pwsh mono mcs xsp4 csc \
+    pip easy_install virtualenv python python3 \
+    git svn hg \
+    do 
+      command -v $cmd
+    done
+    
+build: off
