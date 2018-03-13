@@ -13,5 +13,8 @@ test_script:
     do 
       command -v $cmd
     done
+    echo "foobar"
+    
+- sh: echo "barfoo"
     
 build: off
