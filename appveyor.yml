@@ -4,7 +4,7 @@ init:
 test_script:
 - sh: |
     for cmd in wget curl 7z 7za ftp lftp tclsh \
-    make mvn gradle ant yarn \
+    cmake make mvn gradle ant yarn \
     gcc gfortran java javac go nodejs ruby \
     docker sqlcmd psql mongo rabbitmqctl packer aws localstack az \
     pwsh mono mcs xsp4 csc \
