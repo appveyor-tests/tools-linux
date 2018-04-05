@@ -3,6 +3,8 @@ init:
 
 test_script:
 - sh: |
+    RED='\033[0;31m'
+    NC='\033[0m'
     for cmd in wget curl 7z 7za ftp lftp tclsh \
     cmake make mvn gradle ant yarn \
     gcc gfortran java javac go nodejs ruby \
@@ -11,7 +13,7 @@ test_script:
     pip easy_install virtualenv python python3 \
     git svn hg
     do 
-      command -v $cmd
+      command -v $cmd || echo "$RED$cmd NOT FOUND!$NC"
     done
     echo "foobar"
     
