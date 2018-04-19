@@ -16,6 +16,10 @@ test_script:
     do 
       command -v $cmd || { echo -e "$RED$cmd NOT FOUND!$NC"; FLAG=true; }
     done
-    return $FLAG
+    if $FLAG; then
+      return 0
+    else
+      return 1
+    fi
     
 build: off
