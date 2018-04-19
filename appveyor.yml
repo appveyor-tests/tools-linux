@@ -1,5 +1,7 @@
 init:
 - appveyor version
+- sh: gvm use go1.4
+- sh: rvm use ruby-2.5.0
 
 test_script:
 - sh: |
