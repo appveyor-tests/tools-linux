@@ -1,4 +1,3 @@
-stack: ruby 2.5
 
 init:
 - appveyor version
