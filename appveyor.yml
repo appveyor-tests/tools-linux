@@ -1,6 +1,8 @@
 
 init:
 - appveyor version
+- sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
+- sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
 - sh: gvm use go1.4
 
 test_script:
