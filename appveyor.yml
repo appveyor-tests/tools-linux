@@ -22,7 +22,7 @@ test_script:
       command -v $cmd || { echo -e "$RED$cmd NOT FOUND!$NC"; FLAG=true; }
     done
     set -x
-    if [[ $(lsb_release -sr) == '16.04' ]]; then
+    if [[ $(lsb_release -sr) = '16.04' ]]; then
       for easy_install
       do
         command -v $cmd || { echo -e "$RED$cmd NOT FOUND!$NC"; FLAG=true; }
