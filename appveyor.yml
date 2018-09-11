@@ -15,7 +15,7 @@ test_script:
     gcc gfortran java javac go nodejs ruby \
     docker sqlcmd psql mongo rabbitmqctl packer aws localstack az \
     pwsh mono mcs xsp4 csc \
-    pip easy_install virtualenv python python3 \
+    pip virtualenv python python3 \
     git svn hg
     do 
       command -v $cmd || { echo -e "$RED$cmd NOT FOUND!$NC"; FLAG=true; }
