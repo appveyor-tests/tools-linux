@@ -7,6 +7,7 @@ init:
 - sh: lsb_release -sr
 
 test_script:
+- vcpkg --version
 - sh: |
     RED='\033[0;31m'
     NC='\033[0m'
