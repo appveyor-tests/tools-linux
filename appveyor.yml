@@ -12,14 +12,8 @@ test_script:
     RED='\033[0;31m'
     NC='\033[0m'
     FLAG=false
-    for cmd in wget curl 7z 7za ftp lftp tclsh \
-    cmake make mvn gradle ant yarn \
-    gcc gfortran java javac go node ruby \
-    docker sqlcmd psql mongo rabbitmqctl packer aws az \
-    pwsh mono mcs xsp4 csc \
-    pip virtualenv python python3 \
-    git svn hg
-    do 
+    toolsarr=($TEST_TOOLS)
+    for cmd in "${toolsarr[@]}"; do
       command -v $cmd || { echo -e "$RED$cmd NOT FOUND!$NC"; FLAG=true; }
     done
     set -x
@@ -33,6 +27,10 @@ test_script:
     if $FLAG; then
       exit 1
     else
+      exit 0
+    fi
+    
+build: off
       exit 0
     fi
     
