@@ -31,7 +31,3 @@ test_script:
     fi
     
 build: off
-      exit 0
-    fi
-    
-build: off
