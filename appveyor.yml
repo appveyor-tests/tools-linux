@@ -3,7 +3,7 @@ init:
 - appveyor version
 - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
-- sh: gvm use go1.14
+- sh: gvm use go1.16
 - sh: lsb_release -sr
 
 test_script:
